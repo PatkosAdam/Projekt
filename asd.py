@@ -2,7 +2,6 @@
 import pandas as pd
 
 # creating the DataFrame
-
 df = pd.DataFrame({'Munkavállaló törzsszáma': {0: 23, 1: 43, 2: 12,
                                   3: 13, 4: 67, 5: 89,
                                   6: 90, 7: 56, 8: 34},
@@ -27,8 +26,10 @@ df = pd.DataFrame({'Munkavállaló törzsszáma': {0: 23, 1: 43, 2: 12,
                                      4: 56, 5: 76, 6: 100, 7: 87,
                                      8: 81}})
 
-# determining the name of the file
+# getting rid of the index row
 df.set_index('Munkavállaló törzsszáma', inplace=True)
+
+# determining the name of the file
 file_name = 'MarksData.xlsx'
 
 # saving the excel
